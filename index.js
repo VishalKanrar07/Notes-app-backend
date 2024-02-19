@@ -24,10 +24,12 @@ app.get("/", (req, res) => {
     })
 })
 
+const cont = connection;
+
 app.listen(port, async () => {
 
     try {
-        await connection
+        await cont;
         console.log('database is connected');
     } catch (error) {
         console.log(error);
